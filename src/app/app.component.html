@@ -3,11 +3,11 @@
 <md-card class="card" >
     <md-card-content>
        <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Add your notes here"></textarea>
+      <textarea mdInput placeholder="Add your notes here" [(ngModel)] = "notes"></textarea>
     </md-input-container>
     </md-card-content>
     <md-card-actions align="end">
-       <button  color="primary" md-raised-button>Add </button>
+       <button  color="primary" md-raised-button (click)="saveNote()">Add </button>
 
     </md-card-actions>
 </md-card>

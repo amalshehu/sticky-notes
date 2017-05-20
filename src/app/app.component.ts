@@ -7,18 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 // Initializes the Sticky Notes app.
+public notes: any;
   constructor() {
 
   }
 
   // Saves a new sticky note on localStorage.
   saveNote() {
-
-  }
-
-  // Resets the given MaterialTextField.
-  static resetMaterialTextfield(element) {
-
+   console.log(this.notes);
+   this.notes = '';
   }
 
   // Creates/updates/deletes a note in the UI.
