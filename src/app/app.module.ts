@@ -10,7 +10,8 @@ import { MdCardModule, MdInputModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotesComponent } from './notes/notes.component';
-
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NotesComponent } from './notes/notes.component';
     MdCardModule,
     MdInputModule,
     MdButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebase, 'sticky-notes')
   ],
   providers: [],
   bootstrap: [AppComponent]
