@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdCardModule, MdInputModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NotesComponent } from './notes/notes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
