@@ -1,0 +1,9 @@
+.mat-card {
+margin-top: 20px;
+margin-left: 12px;
+max-width: 18%;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
