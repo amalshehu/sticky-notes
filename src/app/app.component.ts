@@ -10,9 +10,12 @@ export class AppComponent {
   // Initializes the Sticky Notes app.
   public note: any;
   public data: any;
-  public notes: FirebaseListObservable<any[]>;
+  public notes: any;
+  itemsFirebase: any;
   constructor(public db: AngularFireDatabase, public sw: NgServiceWorker) {
-     this.notes = db.list('/item');
+    //  this.notes = db.list('/item');
+     this.notes = db.list('/item').map( (arr) => { return arr.reverse(); } );
+
      this.data = {};
   }
 

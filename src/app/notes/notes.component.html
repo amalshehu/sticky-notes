@@ -1,7 +1,20 @@
-<div fxLayoutAlign="center center" fxFlex.xs="100%"  fxLayout="column" *ngFor="let item of notes | async" >
-  <div fxFlex="80%" fxFlex.md="100%" fxFlex.sm="100%" fxLayoutWrap="wrap" fxFlex.xs="100%" fxLayout.xs="row">
+<!--<div fxLayoutAlign="center center" fxFlex.xs="100%"  fxLayout="row" *ngFor="let item of notes | async" >
+  <div fxFlex="80%" fxFlex.md="100%" fxFlex.sm="100%" fxLayoutWrap="wrap" fxFlex.xs="100%" fxLayout.xs="column">
+    <md-card >
+  <md-card-content>
+    <h2>{{item.notes}}</h2>
+    <p>{{item.date | date}}</p>
+  </md-card-content>
+  <md-card-actions layout="row" layout-align="end center">
 
+  </md-card-actions>
+</md-card>
+  </div>
+</div>
+-->
 
+<div div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="space-between" *ngFor="let item of notes | async" >
+  <div fxFlex.gt-md="19" fxFlex.md="29"  fxFlex.sm="39" fxFlex.xs="100">
     <md-card >
   <md-card-content>
     <h2>{{item.notes}}</h2>
@@ -12,8 +25,5 @@
   </md-card-actions>
 </md-card>
 
-
-
   </div>
 </div>
-
