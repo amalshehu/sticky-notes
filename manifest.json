@@ -5,7 +5,7 @@
   "orientation": "portrait",
   "background_color": "#f5f5f5",
   "theme_color": "#f5f5f5",
-  "start_url": "./https://paulsonp.github.io/progressive-web-app-angular4CLI/",
+  "start_url": "https://amalshehu.github.io/sticky-notes/",
     "icons": [{
             "src": "assets/icons/android-chrome-192x192.png",
             "sizes": "192x192",
