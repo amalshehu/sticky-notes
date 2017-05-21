@@ -1,7 +1,8 @@
 .mat-card {
 margin-top: 20px;
 margin-left: 12px;
-max-width: 18%;
+/*max-width: 18%;*/
+background-color: #FDE755;
 }
 
 @media only screen and (max-width: 600px) {
