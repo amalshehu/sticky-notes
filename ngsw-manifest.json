@@ -1,0 +1,15 @@
+{
+  "static": {
+    "urls": {
+      "https://amalshehu.github.io/sticky-notes/polyfills.2024f3f29aec2a67603a.bundle.js": "37bc8506c4b40a45476790be81265b4e16fc7988",
+      "https://amalshehu.github.io/sticky-notes/main.e093cc9f47b7dfeb4a25.bundle.js": "6d2f1343c2c52024b69f050f0d7425cef6b6eede",
+      "https://amalshehu.github.io/sticky-notes/sw-register.b73048fe3d9f8a1e7ae5.bundle.js": "a98270c864fc34e37b1d992bfe5994323558c2f8",
+      "https://amalshehu.github.io/sticky-notes/vendor.3746a442674e25a9d934.bundle.js": "98e0bbfa4d3011b8dc30e4df873c70f7a252eff4",
+      "https://amalshehu.github.io/sticky-notes/inline.b8142bbdc60092f92dd3.bundle.js": "1dea627d4e42cf17553f606151783a1e9ebe622e",
+      "https://amalshehu.github.io/sticky-notes/styles.e4633e09e7e978763106.bundle.css": "f4a49849662b9af302f89719fd3120e9fda3ce6e",
+      "https://amalshehu.github.io/sticky-notes/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+      "https://amalshehu.github.io/sticky-notes/index.html": "f07e1f80d1b51ab94db05a540244060fa636df01"
+    },
+    "_generatedFromWebpack": true
+  }
+}
