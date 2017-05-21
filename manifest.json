@@ -1,6 +1,6 @@
 {
-    "name": "Paulson Ps",
-    "short_name": "PWA",
+    "name": "sticky-notes",
+    "short_name": "notes",
   "display": "fullscreen",
   "orientation": "portrait",
   "background_color": "#f5f5f5",
