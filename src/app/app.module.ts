@@ -13,7 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotesComponent } from './notes/notes.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
-
+import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,8 @@ import { environment } from '../environments/environment';
     MdButtonModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase, 'sticky-notes'),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ServiceWorkerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
