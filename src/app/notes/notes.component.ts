@@ -11,6 +11,6 @@ export class NotesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.notes);
+    // console.log(this.notes);
   }
 }
