@@ -7,8 +7,19 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
+</script>
 <link href="styles.e4633e09e7e978763106.bundle.css" rel="stylesheet"/></head>
 <body>
   <app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.c0c94534c55456bac831.bundle.js"></script><script type="text/javascript" src="polyfills.0033a1274cf6b1ff9ede.bundle.js"></script><script type="text/javascript" src="vendor.1ed77a6b9b401a4f63b3.bundle.js"></script><script type="text/javascript" src="main.0ca1d435387d97825b64.bundle.js"></script></body>
+<script type="text/javascript" src="inline.269eac16b5987db54d9b.bundle.js"></script><script type="text/javascript" src="polyfills.0033a1274cf6b1ff9ede.bundle.js"></script><script type="text/javascript" src="vendor.1ed77a6b9b401a4f63b3.bundle.js"></script><script type="text/javascript" src="main.baf24bbc1a6de3a6b120.bundle.js"></script></body>
 </html>
