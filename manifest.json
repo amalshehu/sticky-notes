@@ -1,5 +1,5 @@
 {
-    "name": "sticky-notes",
+    "name": "Sticky Notes",
     "short_name": "notes",
   "display": "standalone",
   "orientation": "portrait",
@@ -28,7 +28,7 @@
    "type": "image/png"
   },
   {
-   "src": "/assets/icon/android-chrome-144x144.png",
+   "src": "/sticky-notes/assets/icon/android-chrome-144x144.png",
    "sizes": "144x144",
    "type": "image/png"
   },
