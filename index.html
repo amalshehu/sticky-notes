@@ -13,5 +13,11 @@
 <link href="styles.e4633e09e7e978763106.bundle.css" rel="stylesheet"/></head>
 <body>
   <app-root>Loading...</app-root>
+  <script type='text/javascript' charset='utf-8'>
+    // Hides mobile browser's address bar when page is done loading.
+      window.addEventListener('load', function(e) {
+        setTimeout(function() { window.scrollTo(0, 1); }, 1);
+      }, false);
+</script>
 <script type="text/javascript" src="inline.c98b547fdba2106ada9c.bundle.js"></script><script type="text/javascript" src="polyfills.2024f3f29aec2a67603a.bundle.js"></script><script type="text/javascript" src="sw-register.b73048fe3d9f8a1e7ae5.bundle.js"></script><script type="text/javascript" src="vendor.3746a442674e25a9d934.bundle.js"></script><script type="text/javascript" src="main.22d489a1094883bd2f5d.bundle.js"></script></body>
 </html>
