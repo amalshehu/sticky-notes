@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
-
+import { NgServiceWorker } from '@angular/service-worker';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +11,7 @@ export class AppComponent {
   public note: any;
   public data: any;
   public notes: FirebaseListObservable<any[]>;
-  constructor(public db: AngularFireDatabase) {
+  constructor(public db: AngularFireDatabase, public sw: NgServiceWorker) {
      this.notes = db.list('/item');
      this.data = {};
   }
