@@ -1,7 +1,7 @@
 {
     "name": "sticky-notes",
     "short_name": "notes",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "background_color": "#2196F3",
   "theme_color": "#2196F3",
