@@ -1,0 +1,21 @@
+{
+    "name": "Paulson Ps",
+    "short_name": "PWA",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f5f5f5",
+  "start_url": "./https://paulsonp.github.io/progressive-web-app-angular4CLI/",
+    "icons": [{
+            "src": "assets/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image\/png"
+        },
+        {
+            "src": "assets/icons/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image\/png"
+        }
+    ]
+    
+}
