@@ -11,12 +11,15 @@ export class AppComponent {
   public note: any;
   public data: any;
   public notes: any;
-  itemsFirebase: any;
   constructor(public db: AngularFireDatabase, public sw: NgServiceWorker) {
-    //  this.notes = db.list('/item');
      this.notes = db.list('/item').map( (arr) => { return arr.reverse(); } );
-
      this.data = {};
+     window.addEventListener('load', function() {
+      setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
   }
 
   // Saves a new sticky note on firebase.
