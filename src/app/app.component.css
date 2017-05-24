@@ -1,4 +1,13 @@
 .card {
-  width: 250px;
+  width: 90%;
   margin-top: 50px;
- box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
+  background-color: #15B48C;
+ box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+.mat-input-element{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 25px;
+font-feature-settings: "salt";
+color:palegreen;
+font-weight: 700;
+}
