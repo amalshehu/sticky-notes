@@ -1,0 +1,36 @@
+<!--<router-outlet></router-outlet>-->
+<div fxLayoutAlign="center center" class="login-form" fxLayout="column">
+  <section [ngSwitch]="service.isAuth">
+    <md-card *ngSwitchCase="false">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <h3 *ngSwitchCase="false">Choose your Identity Provider</h3>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" class="row-bottom-space">
+        <div fxLayoutAlign="start center" fxFlex="50%">
+          <button md-raised-button (click)="service.login()">
+      				<img width="30" src="../assets/images/google-logo.png" /> &nbsp; Use My Google Account
+    				</button>
+        </div>
+        <div fxLayoutAlign="end center" fxFlex="50%">
+          <button md-raised-button (click)="service.login()">
+      				<img width="30" src="../assets/images/facebook-logo.png" /> &nbsp; Use My Facebook Account
+    				</button>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayout.xs="column" class="row-bottom-space">
+        <div fxFlex="50%" fxLayoutAlign="start center">
+          <button md-raised-button (click)="service.login()">
+      			<img width="30" src="../assets/images/twitter-logo.png" /> &nbsp; Use My Twitter Account
+    			</button>
+        </div>
+        <div fxFlex="50%" fxLayoutAlign="end center">
+          <button md-raised-button (click)="service.login()">
+      			<img width="30" src="../assets/images/github-logo.png" /> &nbsp; Use My Github Account
+    			</button>
+        </div>
+      </div>
+    </md-card>
+
+  </section>
+</div>
+
