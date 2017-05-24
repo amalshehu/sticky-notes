@@ -1,26 +1,4 @@
 .card {
   width: 250px;
   margin-top: 50px;
-}
-.row-bottom-space {
-  margin-bottom: 1em!important;
-}
-.mat-raised-button {
-   width: 96%!important;
-   padding: 6px 33px 6px 6px!important;
-}
-.login-form h3 {
-  color: #878383;
-}
-.mat-card{
-  background: rgba(124, 163, 163, 0.6);
-  background: rgba(251, 247, 247, 0.22);
-  margin-top: -54px;
-}
-.login-form {
-  background: url("../assets/images/8775428119_af18975128_o.jpg") ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-position-y: -118px;
-}
+ box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}

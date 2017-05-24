@@ -1,3 +1,5 @@
+import { routes } from './app.routing';
+import { RouterModule } from '@angular/router';
 import { AppService } from './app.service';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,6 +29,7 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
