@@ -1,3 +1,4 @@
+import { AppService } from '../app.service';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
+  user: any;
   @Input() notes: any;
-  constructor() { }
+  constructor(public service: AppService) {
+    this.user = {};
+  }
 
   ngOnInit() {
-    // console.log(this.notes);
+     this.service.userData.subscribe(
+      (data: any) => {
+        console.log('from notes', data);
+        this.user = data;
+      }
+    );
   }
 }
