@@ -13,9 +13,9 @@
 </div>
 -->
 
-<div div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="space-between" *ngFor="let item of notes | async">
-  <div fxFlex.gt-md="19" fxFlex.md="29" fxFlex.sm="39" fxFlex.xs="100">
-    <md-card>
+<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center" *ngFor="let item of notes | async">
+  <div fxFlex.gt-md="25" fxFlex.md="29"  fxFlex.sm="39" fxFlex.xs="100" fxLayout="column">
+    <md-card style="width:85%">
     <md-card-header>
         <img md-card-avatar src={{item?.user.photoURL}}>
         <md-card-title>{{item.user.displayName}}</md-card-title>
