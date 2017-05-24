@@ -1,5 +1,53 @@
-<app-navbar></app-navbar>
+
+<app-navbar>
+</app-navbar>
+
 <div fxLayoutAlign="center center">
+
+<section [ngSwitch]="service.isAuth">
+
+  <h3 *ngSwitchCase="false">Choose your Identity Provider</h3>
+
+  <md-card *ngSwitchCase="false">
+
+    <button md-raised-button (click)="service.login()">
+      <img width="30" src="../assets/images/google-logo.png" />Use My Google Account
+    </button>
+
+    <button md-raised-button (click)="service.login()">
+      <img width="30" src="../assets/images/facebook-logo.png" />Use My Facebook Account
+    </button>
+
+    <button md-raised-button (click)="service.login()">
+      <img width="30" src="../assets/images/twitter-logo.png" />Use My Twitter Account
+    </button>
+
+    <button md-raised-button (click)="service.login()">
+      <img width="30" src="../assets/images/github-logo.png" />Use My Github Account
+    </button>
+
+  </md-card>
+
+  <md-card *ngSwitchCase="true">
+     <md-card-header>
+        <img md-card-avatar [src]="user.photoURL || '../assets/images/avatar.png'">
+        <md-card-title>{{ user.displayName }}</md-card-title>
+        <md-card-subtitle>{{ user.email || '(no email)' }}</md-card-subtitle>
+     </md-card-header>
+     <!--<img md-card-image src="../assets/images/md-banner.jpg">-->
+     <md-card-content>
+        <p>You are logged in using <strong>{{ user.providerData[0].providerId }}</strong></p>
+     </md-card-content>
+     <md-card-actions>
+       <button md-raised-button (click)="service.logout()">
+         Logout
+       </button>
+     </md-card-actions>
+
+
+
+
+     <div fxLayoutAlign="center center">
 <md-card class="card" >
     <md-card-content>
        <md-input-container class="example-full-width">
@@ -12,5 +60,13 @@
     </md-card-actions>
 </md-card>
 </div>
+
 <app-notes [notes]='notes'></app-notes>
+  </md-card>
+
+
+
+
+</section>
+</div>
 

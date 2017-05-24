@@ -1,3 +1,4 @@
+import { AppService } from './app.service';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,11 +15,15 @@ import { NotesComponent } from './notes/notes.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    NotesComponent
+    NotesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AngularFireDatabaseModule,
     ServiceWorkerModule
   ],
-  providers: [],
+  providers: [AppService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
