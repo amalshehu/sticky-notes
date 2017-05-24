@@ -1,80 +1,31 @@
 
-<app-navbar>
+<app-navbar *ngIf="service.isAuth">
 </app-navbar>
-
-<div fxLayoutAlign="center center" class="login-form" fxLayout="column">
-	<section [ngSwitch]="service.isAuth">
-		<md-card *ngSwitchCase="false">
-			<div fxLayout="row" fxLayoutAlign="center center"><h3 *ngSwitchCase="false">Choose your Identity Provider</h3></div>
-				<div fxLayout="row"  fxLayout.xs="column" class="row-bottom-space">
-    			<div fxLayoutAlign="start center" fxFlex="50%">
-    				<button md-raised-button (click)="service.login()">
-      				<img width="30" src="../assets/images/google-logo.png" /> &nbsp; Use My Google Account
-    				</button>
-    			</div>
-   				<div fxLayoutAlign="end center" fxFlex="50%">
-    				<button md-raised-button (click)="service.login()">
-      				<img width="30" src="../assets/images/facebook-logo.png" /> &nbsp; Use My Facebook Account 
-    				</button>
-      		</div>
-    		</div>
-				<div fxLayout="row" fxLayout.xs="column" class="row-bottom-space">
-         <div fxFlex="50%" fxLayoutAlign="start center">
-    		 	<button md-raised-button (click)="service.login()">
-      			<img width="30" src="../assets/images/twitter-logo.png" /> &nbsp; Use My Twitter Account 
-    			</button>
-         </div>
- 				 <div fxFlex="50%" fxLayoutAlign="end center">
-    			<button md-raised-button (click)="service.login()">
-      			<img width="30" src="../assets/images/github-logo.png" /> &nbsp; Use My Github Account
-    			</button>
-    		</div>
-    	</div>
-		</md-card>
-
-
-
-
-
-  <md-card *ngSwitchCase="true">
-     <md-card-header>
+  <md-card *ngIf="service.isAuth" style="background-color: #03A9F5;">
+      <md-card-header>
         <img md-card-avatar [src]="user.photoURL || '../assets/images/avatar.png'">
         <md-card-title>{{ user.displayName }}</md-card-title>
         <md-card-subtitle>{{ user.email || '(no email)' }}</md-card-subtitle>
-     </md-card-header>
-     <!--<img md-card-image src="../assets/images/md-banner.jpg">-->
-     <md-card-content>
-        <p>You are logged in using <strong>{{ user.providerData[0].providerId }}</strong></p>
-     </md-card-content>
-     <md-card-actions>
-       <button md-raised-button (click)="service.logout()">
+      </md-card-header>
+
+      <md-card-actions align="end">
+        <button md-raised-button color="primary" (click)="service.logout()">
          Logout
        </button>
-     </md-card-actions>
-
-
-
-
-     <div fxLayoutAlign="center center">
-<md-card class="card" >
+      </md-card-actions>
+    </md-card>
+<div fxLayoutAlign="center center" *ngIf="service.isAuth">
+  <md-card class="card">
     <md-card-content>
-       <md-input-container class="example-full-width">
-      <textarea mdInput placeholder="Add your notes here" [(ngModel)] = "note"></textarea>
-    </md-input-container>
+      <md-input-container class="example-full-width">
+        <textarea mdInput placeholder="Add your notes here" [(ngModel)]="note"></textarea>
+      </md-input-container>
     </md-card-content>
     <md-card-actions align="end">
-       <button  color="primary" md-raised-button (click)="saveNote()">Add </button>
-
+      <button color="primary" md-raised-button (click)="saveNote()">Add </button>
     </md-card-actions>
-</md-card>
-</div>
-
-<app-notes [notes]='notes'></app-notes>
   </md-card>
-
-
-
-
-</section>
 </div>
 
+<app-notes [notes]='notes' *ngIf="service.isAuth"></app-notes>
+<router-outlet></router-outlet>

@@ -30,7 +30,7 @@ export class AppComponent {
     this.service.userData.subscribe(
       (data: any) => {
         console.log(data);
-        debugger
+        // debugger
         this.user = data;
       }
     );
@@ -40,6 +40,7 @@ export class AppComponent {
   saveNote() {
     this.data.date = Date.now();
     this.data.notes = this.note;
+    this.data.user = this.user.providerData[0];
     this.notes.push(this.data).then((note) => { console.log(note.key); });
     this.note = '';
   }
