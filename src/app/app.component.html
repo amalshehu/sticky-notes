@@ -2,31 +2,39 @@
 <app-navbar>
 </app-navbar>
 
-<div fxLayoutAlign="center center">
+<div fxLayoutAlign="center center" class="login-form" fxLayout="column">
+	<section [ngSwitch]="service.isAuth">
+		<md-card *ngSwitchCase="false">
+			<div fxLayout="row" fxLayoutAlign="center center"><h3 *ngSwitchCase="false">Choose your Identity Provider</h3></div>
+				<div fxLayout="row"  fxLayout.xs="column" class="row-bottom-space">
+    			<div fxLayoutAlign="start center" fxFlex="50%">
+    				<button md-raised-button (click)="service.login()">
+      				<img width="30" src="../assets/images/google-logo.png" /> &nbsp; Use My Google Account
+    				</button>
+    			</div>
+   				<div fxLayoutAlign="end center" fxFlex="50%">
+    				<button md-raised-button (click)="service.login()">
+      				<img width="30" src="../assets/images/facebook-logo.png" /> &nbsp; Use My Facebook Account 
+    				</button>
+      		</div>
+    		</div>
+				<div fxLayout="row" fxLayout.xs="column" class="row-bottom-space">
+         <div fxFlex="50%" fxLayoutAlign="start center">
+    		 	<button md-raised-button (click)="service.login()">
+      			<img width="30" src="../assets/images/twitter-logo.png" /> &nbsp; Use My Twitter Account 
+    			</button>
+         </div>
+ 				 <div fxFlex="50%" fxLayoutAlign="end center">
+    			<button md-raised-button (click)="service.login()">
+      			<img width="30" src="../assets/images/github-logo.png" /> &nbsp; Use My Github Account
+    			</button>
+    		</div>
+    	</div>
+		</md-card>
 
-<section [ngSwitch]="service.isAuth">
 
-  <h3 *ngSwitchCase="false">Choose your Identity Provider</h3>
 
-  <md-card *ngSwitchCase="false">
 
-    <button md-raised-button (click)="service.login()">
-      <img width="30" src="../assets/images/google-logo.png" />Use My Google Account
-    </button>
-
-    <button md-raised-button (click)="service.login()">
-      <img width="30" src="../assets/images/facebook-logo.png" />Use My Facebook Account
-    </button>
-
-    <button md-raised-button (click)="service.login()">
-      <img width="30" src="../assets/images/twitter-logo.png" />Use My Twitter Account
-    </button>
-
-    <button md-raised-button (click)="service.login()">
-      <img width="30" src="../assets/images/github-logo.png" />Use My Github Account
-    </button>
-
-  </md-card>
 
   <md-card *ngSwitchCase="true">
      <md-card-header>
