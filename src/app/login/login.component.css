@@ -7,16 +7,35 @@
 }
 .login-form h3 {
   color: #878383;
+  text-align: center;
 }
 .mat-card{
   background: rgba(124, 163, 163, 0.6);
   background: rgba(251, 247, 247, 0.22);
-  margin-top: -54px;
+  margin-top: -124px;
 }
 .login-form {
   background: url("../../assets/images/8775428119_af18975128_o.jpg") ;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  background-position-y: -118px;
+}
+
+@media (max-width: 600px) {
+  .mat-raised-button {
+    margin: 8px 0px 0px 0px!important;
+    width: 100%!important;
+  }
+  .row-bottom-space {
+    margin-bottom: 0em!important;
+  }
+  .login-form .mat-card {
+    width: 82%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1244px) {
+  .login-form {
+    background-position-y: -147px;
+  }
 }

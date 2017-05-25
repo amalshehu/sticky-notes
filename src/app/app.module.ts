@@ -12,6 +12,7 @@ import { MdToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdCardModule, MdInputModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
+import { MdMenuModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotesComponent } from './notes/notes.component';
 import { AngularFireModule } from 'angularfire2';
@@ -35,6 +36,7 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     MdToolbarModule,
     MdCardModule,
+    MdMenuModule,
     MdInputModule,
     MdButtonModule,
     FlexLayoutModule,

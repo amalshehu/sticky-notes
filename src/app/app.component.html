@@ -1,4 +1,15 @@
 
+
+
+
+
+
+
+
+
+
+
+
 <app-navbar *ngIf="service.isAuth">
 </app-navbar>
   <md-card *ngIf="service.isAuth" style="background-color: #03A9F5;">
@@ -14,8 +25,14 @@
        </button>
       </md-card-actions>
     </md-card>
-<div fxLayoutAlign="center center" *ngIf="service.isAuth">
+
+
+
+
+
+<div fxLayoutAlign="center center" *ngIf="service.isAuth" class="add-note">
   <md-card class="card">
+  <md-toolbar>Add your notes here </md-toolbar>
     <md-card-content>
       <md-input-container class="example-full-width">
         <textarea mdInput placeholder="Add your notes here" [(ngModel)]="note"></textarea>
@@ -26,6 +43,10 @@
     </md-card-actions>
   </md-card>
 </div>
+
+
+
+
 
 <app-notes [notes]='notes' *ngIf="service.isAuth"></app-notes>
 <router-outlet></router-outlet>

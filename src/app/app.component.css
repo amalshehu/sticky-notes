@@ -1,13 +1,20 @@
 .card {
-  width: 90%;
+  width: 50%;
   margin-top: 50px;
-  background-color: #15B48C;
- box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  	padding: 0px!important;
  }
 .mat-input-element{
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-font-size: 25px;
-font-feature-settings: "salt";
-color:palegreen;
-font-weight: 700;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 25px;
+	font-feature-settings: "salt";
+	color:palegreen;
+	font-weight: 700;
+}
+
+
+.card .mat-toolbar
+{
+height: 50px;
+background-color: #15B48C;
 }
