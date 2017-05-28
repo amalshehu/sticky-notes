@@ -13,9 +13,10 @@
 </div>
 -->
 
-<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center" *ngFor="let item of notes | async">
-  <div fxFlex.gt-md="25" fxFlex.md="29"  fxFlex.sm="39" fxFlex.xs="100" fxLayout="column">
-    <md-card style="width:85%">
+<div   fxLayoutAlign="center center" style="margin-bottom: 2em;">
+<div fxFlex="90%" fxLayoutWrap="wrap" fxLayout.xs="column" fxLayout="row" fxLayoutAlign="start center">
+<div *ngFor="let item of notes | async" fxFlex="33%"  fxLayout="row">
+    <md-card >
     <md-card-header>
         <img md-card-avatar src={{item?.user.photoURL}}>
         <md-card-title>{{item.user.displayName}}</md-card-title>
@@ -27,9 +28,9 @@
     <md-card-footer>
          <h6>{{item.date | date:'medium'}}</h6>
     </md-card-footer>
-</md-card>
-
-  </div>
+    </md-card>
+</div>
+</div>
 </div>
 
 

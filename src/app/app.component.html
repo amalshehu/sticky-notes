@@ -1,52 +1,51 @@
-
-
-
-
-
-
-
-
-
-
-
-
-<app-navbar *ngIf="service.isAuth">
-</app-navbar>
-  <md-card *ngIf="service.isAuth" style="background-color: #03A9F5;">
-      <md-card-header>
-        <img md-card-avatar [src]="user.photoURL || '../assets/images/avatar.png'">
-        <md-card-title>{{ user.displayName }}</md-card-title>
-        <md-card-subtitle>{{ user.email || '(no email)' }}</md-card-subtitle>
-      </md-card-header>
-
-      <md-card-actions align="end">
+<md-toolbar class="mat-elevation-z5" style="z-index: 100!important; color:white; background-color:#0387D1">
+  <div fxLayoutAlign="start center" fxFlex="50%">
+    Sticky Notes
+  </div>
+  <div fxLayoutAlign="end center" fxFlex="50%" *ngIf="service.isAuth" class="logout">
+  <p>{{ user.displayName }}</p>
+    <button md-button [mdMenuTriggerFor]="menu"><img md-card-avatar [src]="user.photoURL || '../assets/images/avatar.png'"></button>
+      <md-menu #menu="mdMenu">
         <button md-raised-button color="primary" (click)="service.logout()">
-         Logout
-       </button>
-      </md-card-actions>
+      Logout
+     </button>
+      </md-menu>
+  </div>
+</md-toolbar>
+
+<div  *ngIf="service.isAuth" class="add-note" fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <md-card class="card">
+      <md-toolbar>Add your notes here </md-toolbar>
+        <md-card-content>
+          <md-input-container>
+            <textarea mdInput placeholder="Add your notes here" [(ngModel)]="note"></textarea>
+          </md-input-container>
+        </md-card-content>
+        <div fxLayoutAlign="center center">
+          <button style="" md-raised-button (click)="saveNote()">Add </button>
+        </div>
     </md-card>
-
-
-
-
-
-<div fxLayoutAlign="center center" *ngIf="service.isAuth" class="add-note">
-  <md-card class="card">
-  <md-toolbar>Add your notes here </md-toolbar>
-    <md-card-content>
-      <md-input-container class="example-full-width">
-        <textarea mdInput placeholder="Add your notes here" [(ngModel)]="note"></textarea>
-      </md-input-container>
-    </md-card-content>
-    <md-card-actions align="end">
-      <button style="background-color:greenyellow" md-raised-button (click)="saveNote()">Add </button>
-    </md-card-actions>
-  </md-card>
+  </div>
+  <app-notes [notes]='notes' *ngIf="service.isAuth"></app-notes>
 </div>
 
+<!-- old code -->
+<!-- 
+<app-navbar *ngIf="service.isAuth">
+</app-navbar> -->
+<!-- <md-card *ngIf="service.isAuth" style="background-color: #03A9F5;">
+  <md-card-header>
+    <img md-card-avatar [src]="user.photoURL || '../assets/images/avatar.png'">
+      <md-card-title>{{ user.displayName }}</md-card-title>
+        <md-card-subtitle>{{ user.email || '(no email)' }}</md-card-subtitle>
+  </md-card-header>
+  <md-card-actions>
+    <button md-raised-button color="primary" (click)="service.logout()">
+      Logout
+     </button>
+  </md-card-actions>
+</md-card>
+ -->
 
-
-
-
-<app-notes [notes]='notes' *ngIf="service.isAuth"></app-notes>
 <router-outlet></router-outlet>

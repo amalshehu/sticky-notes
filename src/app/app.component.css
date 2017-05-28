@@ -1,5 +1,5 @@
 .card {
-  width: 50%;
+  width: 38%;
   margin-top: 50px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   	padding: 0px!important;
@@ -11,10 +11,30 @@
 	color:palegreen;
 	font-weight: 700;
 }
+.card .mat-toolbar {
+	min-height: 22px;
+  background-color: #15B48C;
+  color: white;
+}
+.card button {
+	background-color:#c8da2c;
+	color: white;
+	margin-bottom: 2em;
+}
+ .mat-raised-button.mat-primary {
+	background-color: #15b48c!important;
+  width: 100%;
+}
+.logout img {
+	width: 37px;
+  height: 37px;
+}
+.logout p {
+	font-size: 18px;
+}
 
-
-.card .mat-toolbar
-{
-height: 50px;
-background-color: #15B48C;
+.add-note {
+  background: url("../assets/images/8775428119_af18975128_o.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

@@ -4,4 +4,15 @@
 body {
 margin: 0;
 }
-
+.card .mat-input-container {
+	width: 100%;
+}
+.card .mat-toolbar-row {
+  height: 54px!important;
+}
+.card .mat-card-content {
+  padding: 1em 1em 0em 1em;
+}
+.mat-menu-panel {
+  margin-top: 53px!important;
+}
